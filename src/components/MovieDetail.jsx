@@ -25,7 +25,7 @@ const MovieDetail = () => {
   if (!movie) return <div>Loading...</div>;
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
+    <div className="flex justify-center items-center min-h-screen bg-black">
       <div className="bg-white shadow-lg rounded-2xl p-6 w-[40rem] text-center">
         <h1 className="text-2xl font-bold mb-3">{movie.Title}</h1>
         <img

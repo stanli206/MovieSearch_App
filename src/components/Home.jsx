@@ -43,10 +43,18 @@ const Home = () => {
           onChange={(e) => setType(e.target.value)}
           className="p-2 border rounded "
         >
-          <option value="" className="text-black">All</option>
-          <option value="movie" className="text-black">Movie</option>
-          <option value="series" className="text-black">Series</option>
-          <option value="episode" className="text-black">Episode</option>
+          <option value="" className="text-black">
+            All
+          </option>
+          <option value="movie" className="text-black">
+            Movie
+          </option>
+          <option value="series" className="text-black">
+            Series
+          </option>
+          <option value="episode" className="text-black">
+            Episode
+          </option>
         </select>
         <button
           onClick={searchMovies}
@@ -55,7 +63,7 @@ const Home = () => {
           Search
         </button>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 bg-white text-black">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-white bg-black">
         {movies.map((movie) => (
           <Link to={`/movie/${movie.imdbID}`} key={movie.imdbID}>
             <div className="border-none shadow p-4 rounded">
@@ -93,5 +101,3 @@ const Home = () => {
 };
 
 export default Home;
-
-
