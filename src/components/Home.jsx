@@ -12,7 +12,7 @@ const Home = () => {
   const searchMovies = async () => {
     try {
       const response = await axios.get(
-        `http://www.omdbapi.com/?apikey=7c874fb4&s=${searchTerm}&page=${page}&type=${type}`
+        `https://www.omdbapi.com/?apikey=7c874fb4&s=${searchTerm}&page=${page}&type=${type}`
       );
       setMovies(response.data.Search || []);
       setTotalResults(response.data.totalResults || 0);
