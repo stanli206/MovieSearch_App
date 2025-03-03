@@ -9,7 +9,7 @@ const Home = () => {
   const [totalResults, setTotalResults] = useState(0);
   const [type, setType] = useState("");
 
-  const API_KEY = "7c874fb4";
+  const API_KEY = process.env.MOVIESEARCHAPI_KEY;  //"7c874fb4";
 
   const searchMovies = async () => {
     try {

@@ -7,7 +7,7 @@ const MovieDetail = () => {
   const navigate = useNavigate();
   const [movie, setMovie] = useState(null);
 
-  const API_KEY = "7c874fb4"; // Replace with your OMDB API key
+  const API_KEY = process.env.MOVIESEARCHAPI_KEY;
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
