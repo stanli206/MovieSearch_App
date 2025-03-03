@@ -7,13 +7,13 @@ const MovieDetail = () => {
   const navigate = useNavigate();
   const [movie, setMovie] = useState(null);
 
-  const API_KEY = process.env.MOVIESEARCHAPI_KEY;
+  const API_KEY = process.env.REACT_APP_MOVIESEARCHAPI_KEY;
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
       try {
         const response = await axios.get(
-          `http://www.omdbapi.com/?apikey=${API_KEY}&i=${id}`
+          `https://www.omdbapi.com/?apikey=${API_KEY}&i=${id}`
         );
         setMovie(response.data);
       } catch (error) {

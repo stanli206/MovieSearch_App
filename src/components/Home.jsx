@@ -9,12 +9,12 @@ const Home = () => {
   const [totalResults, setTotalResults] = useState(0);
   const [type, setType] = useState("");
 
-  const API_KEY = process.env.MOVIESEARCHAPI_KEY;  //"7c874fb4";
+  const API_KEY = process.env.REACT_APP_MOVIESEARCHAPI_KEY;  //"7c874fb4";
 
   const searchMovies = async () => {
     try {
       const response = await axios.get(
-        `http://www.omdbapi.com/?apikey=${API_KEY}&s=${searchTerm}&page=${page}&type=${type}`
+        `https://www.omdbapi.com/?apikey=${API_KEY}&s=${searchTerm}&page=${page}&type=${type}`
       );
       setMovies(response.data.Search || []);
       setTotalResults(response.data.totalResults || 0);
